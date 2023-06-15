@@ -28,11 +28,14 @@ export function CountDown() {
           markCurrentCycleAsFinished()
           setSecondsPassed(totalSeconds)
           clearInterval(interval)
+          document.title = 'Ignite Timer - 00:00'
         } else {
           setSecondsPassed(secondsDifference)
         }
       }, 1000)
     }
+
+    document.title = 'Ignite Timer'
 
     return () => {
       clearInterval(interval)
