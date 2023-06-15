@@ -35,8 +35,6 @@ export function CountDown() {
       }, 1000)
     }
 
-    document.title = 'Ignite Timer'
-
     return () => {
       clearInterval(interval)
     }
@@ -58,7 +56,7 @@ export function CountDown() {
 
   useEffect(() => {
     if (activeCycle) {
-      document.title = `Timer ${minutes}:${seconds}`
+      document.title = `Timer ${minutes}:${seconds} (Terminou)`
     }
   }, [minutes, seconds, activeCycle])
 
